@@ -25,5 +25,5 @@ const interMajorityTest = (firstname, surname, age) => {
 }
 
 
-interMajorityTest(userFirstname, userSurname, age)
+interajorityTest(userFirstname, userSurname, age)
 
