@@ -3,34 +3,32 @@ const chalk = require('chalk')
 
 
 
-
-
-
-
-const input = readlineSync.question('Guess number ?')
-if (isNaN(input)) {
-  console.log(`Error: ${input} is not a number.`)
+if (isNaN(process.argv[2])) {
+  console.log(chalk.bgYellow(`Error: ${process.argv[2]} is not a number.`))
+  process.exit(1)
 }
-const nb = Number(input)
+const secretNumber = Number(process.argv[2])
 
+while (secretNumber) {
 
+  const input = readlineSync.question('Guess number ?  ')
+  if (isNaN(input)) {
+    console.log(chalk.bgYellow(`Error: ${input} is not a number.`))
+    continue
+  }
+  const nb = Number(input)
 
-while (!secretNumber) {
-
-  if (input < secretNumber) {
+  if (nb < secretNumber) {
     console.log(chalk.bgRed(`Nombre trop petit`))
 
-  } else if (input > secretNumber) {
+  } else if (nb > secretNumber) {
     console.log(chalk.bgRed(`Nombre trop grand`))
 
-  } else if (input === secretNumber) {
+  } else if (nb === secretNumber) {
     console.log(chalk.bgGreen('Bravo !'))
+    break
   }
 }
 
 
 
-
-
-
-console.log(secretNumber)

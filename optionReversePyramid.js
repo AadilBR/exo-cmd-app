@@ -22,9 +22,6 @@ if (isNaN(process.argv[2])) {
 }
 
 
-
-
-
 const nbBase = process.argv[2]
 const caract = process.argv[3]
 const reverse = process.argv[4] ?? 0

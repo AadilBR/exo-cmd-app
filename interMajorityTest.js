@@ -1,10 +1,11 @@
 const readlineSync = require('readline-sync')
 
-if (process.argv.length !== 2) {
+if (process.argv.length !== 3) {
   console.log(`usage: node interMajorityTest`)
   process.exit(1)
 }
-const majorityAge = readlineSync.question('What is majority age in your country ?')
+const majorityAge = Number(process.argv[2])
+
 const userFirstname = readlineSync.question('May I have your name ? ')
 const userSurname = readlineSync.question('May I have your surname ? ')
 const userAge = readlineSync.question('May I have your age ? ')
