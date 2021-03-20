@@ -2,8 +2,10 @@ const readlineSync = require('readline-sync')
 const chalk = require('chalk')
 
 
-
-
+if (process.argv.length > 2) {
+  console.log(chalk.bgYellow(`Error: veuillez enter node quiz.js uniquement.`))
+  process.exit(1)
+}
 
 const question1 = readlineSync.question(`Question 1: Le C++ est un:\n
 1: langage\n 

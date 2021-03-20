@@ -19,7 +19,7 @@ while (secretNumber) {
   const nb = Number(input)
 
   if (nb < secretNumber) {
-    console.log(chalk.bgRed(`Nombre trop petit`))
+    console.log(chalk.bgRedBright(`Nombre trop petit`))
 
   } else if (nb > secretNumber) {
     console.log(chalk.bgRed(`Nombre trop grand`))
