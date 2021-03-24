@@ -1,7 +1,7 @@
 const readlineSync = require('readline-sync')
 
 if (process.argv.length !== 3) {
-  console.log(`usage: node interMajorityTest`)
+  console.log(`usage: node interMajorityTest majorityAge`)
   process.exit(1)
 }
 const majorityAge = Number(process.argv[2])
@@ -23,8 +23,9 @@ const interMajorityTest = (firstname, surname, age) => {
   } else {
     console.log(`${firstname} ${surname}, vous êtes majeur, vous pouvez voter`)
   }
+  return 0
 }
 
 
-interajorityTest(userFirstname, userSurname, age)
+interMajorityTest(userFirstname, userSurname, age)
 

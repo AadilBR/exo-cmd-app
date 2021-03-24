@@ -10,6 +10,10 @@ const showStars = (nbBase, caract, reverse) => {
   }
 }
 
+/* if (process.argv.length < 4 || process.argv.length > 5) {
+  console.log('2 or 3 parameters needed')
+  process.exit(1)
+} */
 
 if (!(process.argv.length === 4 || (process.argv[4] === '-r' && process.argv.length === 5))) {
   console.log(`usage: node pyramid.js number caractere`)
